@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "vazir";
+    src: url("../assets/fonts/vazir/vazir.ttf");
+    font-display: swap;
+}
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    direction: rtl;
+    font-family: "vazir";
+    background-color: #282828;
+
+}
+
+.content {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+@layer utilities {
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    scrollbar-width: none;
+}
+
+.DatePicker__input {
+    border: unset !important;
+}
+
+.custom-input-placeholder::placeholder {
+    font-size: 12px;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+.radio-display-none[type="radio"] {
+    display: none;
+}
+
+.blogPage-video iframe {
+    width: 100%;
+    height: 24vw
+}
+
+.custom_gradient{
+    background:linear-gradient(305.45deg, rgba(147, 239, 30, 0.6) 14.91%, rgba(17, 130, 109, 0.6) 86.94%);
+}
+
+.custom_gradient-second {
+    background:linear-gradient(94.39deg, rgba(147, 239, 30, 0.5) 13.87%, rgba(34, 154, 240, 0.5) 96.83%);
+}
+
+.custom_gradient-third {
+    background:linear-gradient(294.46deg, rgba(34, 234, 197, 0.4) 6.38%, rgba(164, 30, 235, 0.4) 80.52%);
+}
+
+.custom_gradient-forth {
+    background:linear-gradient(294.46deg, rgba(238, 205, 30, 0.4) 6.38%, rgba(219, 24, 70, 0.4) 80.52%);
+}
