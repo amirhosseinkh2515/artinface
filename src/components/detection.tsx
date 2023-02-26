@@ -108,7 +108,7 @@ const Detection = () => {
     <>
       {data.predicted_age == 0 ?
         <div className="detection_root">
-          {!loading ?
+          {loading ?
             (
               <CameraApp
                 onClear={() => console.log("setCardImage")}

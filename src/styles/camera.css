@@ -47,8 +47,11 @@
 
 .upload-btn-wrapper {
   position: absolute;
-  bottom: 18vh;
+  /* bottom: 18vh;
+  left: 5%; */
+  top: 5vh;
   left: 5%;
+  width: 90%;
 }
 
 .upload-btn-wrapper span {

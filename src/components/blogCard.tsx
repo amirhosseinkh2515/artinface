@@ -11,22 +11,22 @@ type BlogCard = {
 
 const BlogCard: FC<BlogCard> = ({ img }) => {
     return (
-        <div className="border-[1px] border-gray-8 w-96 xl:w-126 bg-dark-main">
+        <div className="border-[1px] border-gray-8 w-90 xl:w-104 2xl:w-132 bg-dark-main">
             <img src={img} className="" />
             <div className="w-full flex text-gray-8 px-4 pt-4">
                 <span className="w-[48%]">
                     ۲۹ فروردین ۱۴۰۰
                 </span>
                 <div className="w-full flex flex-wrap justify-end w-full">
-                    <div className="w-full flex flex-wrap justify-center w-[35%]">
+                    <div className="flex flex-wrap justify-center w-[35%]">
                         <Timer />
                         <span className="mr-1">10 دقیقه</span>
                     </div>
-                    <div className="w-full flex flex-wrap justify-center w-[25%]">
+                    <div className="flex flex-wrap justify-center w-[25%]">
                         <ThumbsUp />
                         <span className="mr-1">56</span>
                     </div>
-                    <div className="w-full flex flex-wrap justify-center w-[25%]">
+                    <div className="flex flex-wrap justify-center w-[25%]">
                         <Visibility />
                         <span className="mr-1">56</span>
                     </div>

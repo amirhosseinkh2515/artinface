@@ -39,26 +39,26 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
 
     return (
         <>
-            <div className='flex flex-wrap justify-center container w-[80%] xl:w-[60%] mx-auto'>
+            <div className='flex flex-wrap justify-center container w-[80%] xl:w-[70%] 2xl:w-[60%] mx-auto'>
                 <p className='text-gray-8 text-xl my-20'>
                    برای تشخیص مجدد صفحه را رفرش کنید
                 </p>
                 <div className='flex justify-between text-white w-full'>
                     <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
                         <p className='w-full text-sm md:text-base xl:text-base'>سن پوستی(STD):</p>
-                        <span className='text-xl md:text-xl xl:text-3xl'>{data.predicted_age}</span>
+                        <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.predicted_age}</span>
                     </div>
                     <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
                         <p className='w-full text-sm md:text-base xl:text-base'>چین و چروک:</p>
-                        <span className='text-xl md:text-xl xl:text-3xl'>{data.has_wrinkle ? "دارد" : "ندارد"}</span>
+                        <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.has_wrinkle ? "دارد" : "ندارد"}</span>
                     </div>
                     <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
                         <p className='w-full text-sm md:text-base xl:text-base'>قرمزی پوست:</p>
-                        <span className='text-xl md:text-xl xl:text-3xl'>{data.has_redness ? "دارد" : "ندارد"}</span>
+                        <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.has_redness ? "دارد" : "ندارد"}</span>
                     </div>
                     <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
                         <p className='w-full text-sm md:text-base xl:text-base'>پف زیر چشم:</p>
-                        <span className='text-xl md:text-xl xl:text-3xl'>{data.has_eyebag ? "دارد" : "ندارد"}</span>
+                        <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.has_eyebag ? "دارد" : "ندارد"}</span>
                     </div>
                 </div>
                 {/* grid gap-y-12 gap-x-12 grid-cols-4 */}

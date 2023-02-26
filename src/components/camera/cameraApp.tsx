@@ -102,12 +102,12 @@ const CameraApp: React.FC<CameraApp> = ({ onClear, search, buttonText }) => {
           <div className={image ? "image-croper-wrapper" : "upload-btn-wrapper"}>
             <ImageCroper handleImageUpload={handleImageUpload} image={image} setImage={setImage} />
           </div>
-          {!image &&
+          {/* {!image &&
             <div className="arrow-container">
               <p> تصویرت رو از اینجا بارگذاری کن</p>
               <PointerArrow />
             </div>
-          }
+          } */}
         </div>
       )}
     </>

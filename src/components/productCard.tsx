@@ -10,29 +10,29 @@ type ProductCard = {
 
 const ProductCard: FC<ProductCard> = ({ img }) => {
     return (
-        <div className="flex flex-wrap border-[1px] border-gray-8 w-96 xl:w-126 bg-dark-main p-4">
+        <div className="flex flex-wrap border-[1px] border-gray-8 w-90 xl:w-104 2xl:w-126 bg-dark-main p-4">
             <div className="flex w-[52%] ">
-                <div className="flex flex-wrap text-xs md:text-sm xl:text-base">
-                    <h4 className="text-white text-sm md:text-base xl:text-xl py-4">
+                <div className="flex flex-wrap text-xs md:text-sm 2xl:text-base">
+                    <h4 className="text-white text-sm md:text-base xl:text-lg 2xl:text-xl py-4">
                     سرم پوست بایو آکوا مدل ویتامین C
                     </h4>
                     <p className="text-gray-8 mb-4">
                     ویژگی‌ها: لورم ایسو لورمایپسووم و لورم ایپ 
                     </p>
                     <div className="flex justify-between w-full">
-                        <div className="text-gray-8 text-xs md:text-sm xl:text-base">
+                        <div className="text-gray-8 text-xs md:text-sm 2xl:text-base">
                             <span>
                                 امتیاز کاربران:
                             </span>
                         </div>
-                        <div className="flex justify-end text-xs md:text-sm xl:text-base">
+                        <div className="flex justify-end text-xs md:text-sm 2xl:text-base">
                             <span className="text-white">
                                 ۴.۸ (۶۵)
                             </span>
                             <StarFull />
                         </div>
                     </div>
-                    <CustomLink className="flex items-center text-white text-sm md:text-base xl:text-xl cursor-pointer">
+                    <CustomLink className="flex items-center text-white text-sm md:text-base xl:text-lg 2xl:text-xl cursor-pointer">
                         <span className="ml-4">
                             اطلاعات بیشتر
                         </span>

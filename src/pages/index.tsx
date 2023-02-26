@@ -31,10 +31,10 @@ export default function Home() {
       <div className='flex w-full flex-wrap justify-center relative'>
         <img src={ellipse} className="absolute top-0 w-full" />
         <div className='flex w-[50%] flex-wrap justify-right items-center content-center px-[5%] h-[calc(100vh-78px)] xl:h-[calc(100vh-108px)]  text-white z-[2] relative'>
-          <h1 className="text-2xl md:text-4xl xl:text-6xl mb-4">
+          <h1 className="text-2xl md:text-4xl xl:text-5xl 2xl:text-6xl mb-4">
             متن آزمایشی حدودا کوتاه
           </h1>
-          <h2 className="text-lg md:text-xl xl:text-2xl">
+          <h2 className="text-lg md:text-xl 2xl:text-2xl">
             این یک متن آزمایشی ثابت برای این بخش است این یک متن آزمایشی ثابت برای این بخش است
           </h2>
           <CustomLink href="/detection-landing" className="flex flex-wrap items-center border-[1px] border-gray-2 p-3 xl:p-4 mt-10 text-lg cursor-pointer ">
