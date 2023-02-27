@@ -80,20 +80,16 @@ const ImageCroper = ({ handleImageUpload, image, setImage }) => {
         }
 
       </div>
-      <div>
-        <div
-          className="box croper-button-container"
-        >
-          {image &&
-            <button className="croper-button" onClick={getCropData}>
-              تایید
-            </button>
-          }
-        </div>
+      <div className="box croper-button-container">
+        {image &&
+          <button className="croper-button" onClick={getCropData}>
+            تایید
+          </button>
+        }
       </div>
       <br style={{ clear: "both" }} />
       {image ?
-        <button className="text-white bg-red-main p-3" onClick={removeImage}>
+        <button className="text-white bg-red-main p-3 ml-[10px]" onClick={removeImage}>
           بارگذاری مجدد
         </button>
         :
