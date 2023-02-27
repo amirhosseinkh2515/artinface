@@ -122,7 +122,7 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
                 </div>
             </div>
             {showModal &&
-                <Modal setShowModal={setShowModal} containerClassName="z-[70] items-center" >
+                <Modal setShowModal={setShowModal} closeable={true} containerClassName="z-[70] items-center" innerClassName="w-mc sm:w-[768px]">
                     <FaceDetails data={dataSentToModal} />
                 </Modal>
             }

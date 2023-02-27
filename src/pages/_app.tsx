@@ -2,6 +2,7 @@ import '../styles/globals.css'
 import '../styles/camera.css'
 import '../styles/dragAndDropFile.css'
 import "react-toastify/dist/ReactToastify.css";
+import "@hassanmojab/react-modern-calendar-datepicker/lib/DatePicker.css";
 import "nprogress/nprogress.css";
 import { ToastContainer, toast } from 'react-toastify';
 import type { AppProps } from 'next/app'

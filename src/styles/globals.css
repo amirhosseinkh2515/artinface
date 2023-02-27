@@ -41,6 +41,7 @@
 
 .DatePicker__input {
     border: unset !important;
+    background-color: #2D2D2D !important;
 }
 
 .custom-input-placeholder::placeholder {

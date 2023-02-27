@@ -10,7 +10,7 @@ type ExpertCard = {
 
 const ExpertCard: FC<ExpertCard> = ({ }) => {
     return (
-        <div className="border-[1px] border-gray-8 w-90 xl:w-104 2xl:w-126 bg-dark-main p-4 xl:p-8">
+        <div className="border-[1px] border-gray-8 w-96 xl:w-104 2xl:w-126 bg-dark-main p-4 xl:p-8">
             <div className="flex">
                 <img src={smiling_man} className="w-28 h-28 md:w-24 md:h-24 w-28 h-28" />
                 <div className="flex flex-wrap mr-4 xl:mr-8">

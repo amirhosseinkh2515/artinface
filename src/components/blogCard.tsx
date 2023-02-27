@@ -11,9 +11,9 @@ type BlogCard = {
 
 const BlogCard: FC<BlogCard> = ({ img }) => {
     return (
-        <div className="border-[1px] border-gray-8 w-90 xl:w-104 2xl:w-132 bg-dark-main">
+        <div className="border-[1px] border-gray-8 w-96 xl:w-104 2xl:w-132 bg-dark-main">
             <img src={img} className="" />
-            <div className="w-full flex text-gray-8 px-4 pt-4">
+            <div className="w-full flex text-gray-8 px-4 pt-4 text-sm md:text-sm xl:text-base 2xl:text-xl">
                 <span className="w-[48%]">
                     ۲۹ فروردین ۱۴۰۰
                 </span>

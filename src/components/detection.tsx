@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import CameraApp from "./camera/cameraApp";
 import Loading from "./loading";
-import { detect } from "../services/detection";
-import lonely_beautiful_girl from '../assets/images/lonely_beautiful_girl.png'
+import { detect } from "@/services/detection";
+import lonely_beautiful_girl from '@/assets/images/lonely_beautiful_girl.png'
 import { useRouter } from "next/router";
-import DetectionResultComponent from '../components/detectionResult'
+import DetectionResultComponent from '@/components/detectionResult'
+import CompleteProfile from '@/components/completeProfile'
+import Modal from '@/components/modal'
 import { useNextQueryParams } from "../hooks/useQueryParams";
 // import useAccessRole from "../hooks/useAccessRole";
 // import QuickRegistration from './components/quick-registration/quickRegistration'
@@ -23,6 +25,7 @@ const Detection = () => {
   const [loading, setLoading] = useState(false);
   // const [startQuickRegistration, setStartQuickRegistration] = useState(false);
   // const [showQuickNameREgister, setShowQuickNameREgister] = useState(false);
+  const [showCompleteProfileModal, setShowCompleteProfileModal] = useState(false);
   const [disableButton, setDisableButton] = useState(false)
   const [exist, setExist] = useState(false)
   const [fileObj, setFileObj] = useState<any>()
@@ -108,7 +111,7 @@ const Detection = () => {
     <>
       {data.predicted_age == 0 ?
         <div className="detection_root">
-          {loading ?
+          {!loading ?
             (
               <CameraApp
                 onClear={() => console.log("setCardImage")}
@@ -124,7 +127,11 @@ const Detection = () => {
         :
         <DetectionResultComponent data={data} />
       }
-
+      {showCompleteProfileModal &&
+        <Modal setShowModal={setShowCompleteProfileModal} containerClassName="items-center" innerClassName="w-mc sm:w-124">
+          <CompleteProfile />
+        </Modal>
+      }
 
 
       {/* {showQuickNameREgister &&

@@ -10,7 +10,7 @@ type ProductCard = {
 
 const ProductCard: FC<ProductCard> = ({ img }) => {
     return (
-        <div className="flex flex-wrap border-[1px] border-gray-8 w-90 xl:w-104 2xl:w-126 bg-dark-main p-4">
+        <div className="flex flex-wrap border-[1px] border-gray-8 w-96 xl:w-104 2xl:w-126 bg-dark-main p-4">
             <div className="flex w-[52%] ">
                 <div className="flex flex-wrap text-xs md:text-sm 2xl:text-base">
                     <h4 className="text-white text-sm md:text-base xl:text-lg 2xl:text-xl py-4">

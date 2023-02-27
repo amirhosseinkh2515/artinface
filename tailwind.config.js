@@ -21,6 +21,7 @@ module.exports = {
           main: "#389B7A",
           second: "#6CA02A",
           third: "#11826D",
+          forth: "#22EAC5",
         },
         red: {
           main: "#9B3859",

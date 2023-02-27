@@ -9,7 +9,7 @@ type UserComments = {
 
 const UserComments: FC<UserComments> = ({ }) => {
     return (
-        <div className="border-[1px] border-gray-8 w-90 xl:w-104 2xl:w-126 bg-dark-main p-8">
+        <div className="border-[1px] border-gray-8 w-96 xl:w-104 2xl:w-126 bg-dark-main p-8">
             <div className="flex flex-wrap justify-between items-center w-full mb-4">
                 <h4 className="text-white text-xl md:text-xl xl:text-2xl 2xl:text-3xl">
                     نام و نام خانوادگی

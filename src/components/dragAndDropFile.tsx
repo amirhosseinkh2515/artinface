@@ -42,8 +42,9 @@ const DragAndDropFile = ({onChange}:{onChange:any}) => {
     };
 
     return (
-        <form id="form-file-upload" className="w-full h-96" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
+        <form id="form-file-upload" className="w-full h-96 relative" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
             <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
+            <div className="w-28 h-28 blur-xl custom_gradient absolute right-[calc(50vw-100px)] -bottom-[55%]"/>
             <label id="label-file-upload" htmlFor="input-file-upload" className={`${dragActive ? "drag-active" : ""} flex flex-wrap content-center`}>
                 <Cloud />
                 <div className="w-full mt-4">
