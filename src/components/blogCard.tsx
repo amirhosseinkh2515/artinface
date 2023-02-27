@@ -1,4 +1,5 @@
 import { FC } from "react"
+import Image from 'next/image'
 import CustomLink from "./customLink"
 import Arrow from '../assets/svgs/arrow2'
 import Timer from '../assets/svgs/timer'
@@ -13,6 +14,10 @@ const BlogCard: FC<BlogCard> = ({ img }) => {
     return (
         <div className="border-[1px] border-gray-8 w-96 xl:w-104 2xl:w-132 bg-dark-main">
             <img src={img} className="" />
+            {/* <Image src={img} alt="آرتین" width={200} height={160}
+                sizes="(max-width: 768px) 100vw,
+          (max-width: 1200px) 50vw,
+          33vw" style={{ height: '100%', width: '100%' }} layout="responsive" objectFit="contain" /> */}
             <div className="w-full flex text-gray-8 px-4 pt-4 text-sm md:text-sm xl:text-base 2xl:text-xl">
                 <span className="w-[48%]">
                     ۲۹ فروردین ۱۴۰۰
