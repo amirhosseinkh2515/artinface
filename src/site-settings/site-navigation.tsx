@@ -1,6 +1,7 @@
 import Logo from '../assets/svgs/logo'
 
 export const HOME = '/';
+export const STORE= '/store';
 export const CONTACT = '/contact_us';
 export const BLOGS = '/blogs';
 export const ABOUT = '/about-us';
@@ -45,7 +46,7 @@ export const NAVBAR_MENU = [
         }
     },
     {
-        href: HOME,
+        href: STORE,
         label: "فروشگاه",
         event: {
             category: '',

@@ -18,6 +18,7 @@ const BlogCard: FC<BlogCard> = ({ img }) => {
                 sizes="(max-width: 768px) 100vw,
           (max-width: 1200px) 50vw,
           33vw" style={{ height: '100%', width: '100%' }} layout="responsive" objectFit="contain" /> */}
+          
             <div className="w-full flex text-gray-8 px-4 pt-4 text-sm md:text-sm xl:text-base 2xl:text-xl">
                 <span className="w-[48%]">
                     ۲۹ فروردین ۱۴۰۰
