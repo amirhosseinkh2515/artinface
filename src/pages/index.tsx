@@ -48,8 +48,8 @@ export default function Home() {
           <img src={top_dotted} className="absolute -right-[15%] bottom-[15%] " />
         </div>
         <div className='flex w-[50%] h-[calc(100vh-78px)] xl:h-[calc(100vh-108px)] relative flex-wrap justify-center content-center'>
-          <img src={woman} className="w-[40%] absolute top-[10%] right-[7.5%]" />
-          <img src={woman_applying} className=" w-[45%] absolute bottom-[10%] left-[7.5%]" />
+          <img src={woman} className="md:w-[184px] md:h-[284px] lg:w-[228px] lg:h-[351px] xl:w-[263px] xl:h-[404px] 2xl:w-[310px] 2xl:h-[476px] z-[2]" />
+          <img src={woman_applying} className="md:w-[222px] md:h-[256px] lg:w-[275px] lg:h-[317px] xl:w-[317px] xl:h-[365px] 2xl:w-[374px] 2xl:h-[430px] mt-[200px] z-[2]" />
           <img src={small_moon} className="w-4 h-4 absolute top-[20%] left-[25%]" />
           <img src={small_moon} className="w-12 h-12 absolute bottom-[20%] right-[15%]" />
         </div>

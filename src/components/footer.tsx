@@ -22,7 +22,7 @@ const Footer = () => {
                 </CustomLink>
                 <div className="flex flex-wrap justify-center sm:justify-between items-center w-full">
                     <div className="md:w-4/12">
-                        <h3 className="text-white mt-10"> آرتین اپ چیست؟</h3>
+                        <h3 className="text-white mt-10">آرتین اپ چیست؟</h3>
                         <p className="text-white mt-5 text-sm leading-8 text-justify">
                             آرتین اپ پلتفرمی است که در آن می‌توانید توانایی‌ ها و مهارت های خود را در بازه های زمانی مختلف با دیگران به اشتراک بگذارید. تفاوت فعالیت در آرتین اپ و انجام کار خیر داوطلبانه، ایجاد ارتباطات متقابل در جامعه است. بدین معنا که هدف اصلی فعالیت های داوطلبانه تنها رفع نیاز است اما آرتین اپ، شبکه ای تعاملی است که فارغ از انجام کارها، به ایجاد حس همدلی در جامعه نیز کمک می‌کند.
                         </p>
@@ -41,7 +41,7 @@ const Footer = () => {
                                 ))
                             }
                         </ul>
-                        <div className="w-64 h-28 blur-[39px] rotate-[200deg] custom_gradient-forth absolute -left-[10%] -bottom-[15%]"/>
+                        <div className="w-40 sm:w-64 h-28 blur-[39px] rotate-[200deg] custom_gradient-forth absolute -left-[10%] -bottom-[15%]"/>
                     </div>
                     <div className="md:w-1/4 sm:w-1/3 px-3" >
                         <div className="flex flex-wrap justify-end items-center mb-3" >

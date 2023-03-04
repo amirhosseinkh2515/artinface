@@ -1,7 +1,8 @@
 
 
 const Svg = ({width,data}:{width:any,data:any}) => {
-    const harchi = [data["left_eye"], data["right_eye"], data["right_cheek"], data["left_cheek"], data["mouth"], data["mental"], data["right_mandibular"], data["left_mandibular"], data["forehead"]]
+    console.log(width, "widthwidth3")
+    const dataArray = [data["left_eye"], data["right_eye"], data["right_cheek"], data["left_cheek"], data["mouth"], data["mental"], data["right_mandibular"], data["left_mandibular"], data["forehead"]]
 
     const mac = (svg: any) => {
         let element: any = ""
@@ -15,9 +16,8 @@ const Svg = ({width,data}:{width:any,data:any}) => {
     }
     return (
         <svg height={width} width={width} >
-            {harchi.map((svg) => mac(svg))}
+            {dataArray.map((svg) => mac(svg))}
         </svg>
-
     )
 }
 

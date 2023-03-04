@@ -1,5 +1,5 @@
 import { FC } from "react"
-import Image from 'next/image'
+// import Image from 'next/image'
 import CustomLink from "./customLink"
 import Arrow from '../assets/svgs/arrow2'
 import Timer from '../assets/svgs/timer'

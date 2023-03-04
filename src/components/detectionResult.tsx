@@ -14,7 +14,7 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
     const [showModal, setShowModal] = useState(false)
     const [dataSentToModal, setDataSentToModal] = useState({})
     const container_width = imgRef?.current?.offsetWidth
-    console.log(container_width,"imgRefimgRef")
+    console.log(container_width, "imgRefimgRef")
 
     const onOpenModalClicked = (part: string) => {
         if (part == "wrinkle") {
@@ -41,30 +41,30 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
         <>
             <div className='flex flex-wrap justify-center container w-[80%] xl:w-[70%] 2xl:w-[60%] mx-auto'>
                 <p className='text-gray-8 text-xl my-20'>
-                   برای تشخیص مجدد صفحه را رفرش کنید
+                    برای تشخیص مجدد صفحه را رفرش کنید
                 </p>
-                <div className='flex justify-between text-white w-full'>
-                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
+                <div className='grid gap-y-12 gap-x-12 grid-cols-2 sm:grid-cols-4 text-white w-full'>
+                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-full'>
                         <p className='w-full text-sm md:text-base xl:text-base'>سن پوستی(STD):</p>
                         <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.predicted_age}</span>
                     </div>
-                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
+                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-full'>
                         <p className='w-full text-sm md:text-base xl:text-base'>چین و چروک:</p>
                         <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.has_wrinkle ? "دارد" : "ندارد"}</span>
                     </div>
-                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
+                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-full'>
                         <p className='w-full text-sm md:text-base xl:text-base'>قرمزی پوست:</p>
                         <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.has_redness ? "دارد" : "ندارد"}</span>
                     </div>
-                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-[20%]'>
+                    <div className='flex flex-wrap justify-between text-gray-8 text-xl w-full'>
                         <p className='w-full text-sm md:text-base xl:text-base'>پف زیر چشم:</p>
                         <span className='text-xl md:text-xl xl:text-2xl 2xl:text-3xl'>{data.has_eyebag ? "دارد" : "ندارد"}</span>
                     </div>
                 </div>
                 {/* grid gap-y-12 gap-x-12 grid-cols-4 */}
-                <div className='grid gap-y-12 gap-x-12 grid-cols-4 text-white w-full mt-10'>
+                <div className='flex flex-wrap justify-center sm:grid gap-y-12 gap-x-4 lg:gap-y-12 lg:gap-x-12 content-center grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-white w-full mt-10'>
                     <div className='flex flex-wrap w-[256px] h-[256px]'>
-                        <img src={data.image} className="w-full h-full"/>
+                        <img src={data.image} className="w-full h-full" />
                         <span className='w-full text-gray-8 my-2 xl:my-4 text-center'>
                             تصویر اصلی
                         </span>
@@ -73,10 +73,10 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
                         <img ref={imgRef} src={data.image} className="w-full h-full" />
                         {container_width &&
                             <span className="absolute w-full h-full">
-                                <Svg width={container_width} data={data.segments}/>
+                                <Svg width={container_width} data={data.segments} />
                             </span>
                         }
-                        
+
                         <span className='w-full text-gray-8 my-2 xl:my-4 text-center'>
                             نقاط تشخیص
                         </span>
@@ -96,8 +96,8 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
                         </span>
                     </button>
                 </div>
-                <div className='flex w-full justify-between items-end my-8'>
-                    <div className='flex flex-wrap p-8 w-[48%] mt-4 bg-dark-main'>
+                <div className='flex flex-wrap w-full justify-between items-end my-8'>
+                    <div className='flex flex-wrap p-8 w-full md:w-[48%] mt-4 bg-dark-main'>
                         <p className='w-full text-gray-8 text-xl leading-10'>ریز نمودار</p>
                         <div className='w-full flex justify-between text-green-second leading-8'>
                             <span>موی چتری</span>
@@ -116,7 +116,7 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
                             <span>{convertNumberToPercant(data.facial_attributes.Male)}</span>
                         </div>
                     </div>
-                    <CustomLink className='border-[1px] border-gray-8 py-2 px-8 bg-dark-main text-gray-8'>
+                    <CustomLink className='border-[1px] border-gray-8 py-2 px-8 mt-4 md:mt-0 bg-dark-main text-gray-8'>
                         معرفی محصولات
                     </CustomLink>
                 </div>

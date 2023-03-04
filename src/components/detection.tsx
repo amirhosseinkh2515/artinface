@@ -8,6 +8,7 @@ import DetectionResultComponent from '@/components/detectionResult'
 import CompleteProfile from '@/components/completeProfile'
 import Modal from '@/components/modal'
 import { useNextQueryParams } from "../hooks/useQueryParams";
+import { toast } from "react-toastify";
 // import useAccessRole from "../hooks/useAccessRole";
 // import QuickRegistration from './components/quick-registration/quickRegistration'
 // import SelectPet from './select-pet/selectPet'
@@ -89,7 +90,18 @@ const Detection = () => {
           setLoading(false);
         }, 1000);
       }
+      else if (data.detection.is_aborted == false && data.detection.is_imperfect == true) {
+        // window.location.href = `/detection?id=${data.detection.id}`
+        toast.error("لطفا عکس بهتری بارگذاری کنید")
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      }
       else {
+        toast.error("عکس مناسب تشخیص نیست")
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
         // history.push({ pathname: "/crop-not-found", query: { ...data } });
         // setTimeout(() => {
         //   setLoading(false);
