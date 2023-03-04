@@ -32,6 +32,7 @@ const Detection = () => {
   const [fileObj, setFileObj] = useState<any>()
   const [name, setName] = useState("")
   const [hasName, setHasName] = useState()
+  const [renderingComponent, setRenderingComponent] = useState("take_image")
   const [data, setData] = useState({
     has_eyebag: false,
     has_redness: false,
@@ -73,6 +74,7 @@ const Detection = () => {
       localStorage.removeItem("selected_item")
       if (data.detection.is_aborted == false && data.detection.is_imperfect == false) {
         // window.location.href = `/detection?id=${data.detection.id}`
+        setRenderingComponent("has_result")
         setData({
           has_eyebag: data.detection.result.has_eyebag,
           has_redness: data.detection.result.has_redness,
@@ -81,7 +83,7 @@ const Detection = () => {
           predicted_age_std: data.detection.result.predicted_age_std,
           facial_attributes: data.detection.result.facial_attributes,
           wrinkle_fractions: data.detection.result.wrinkle_fractions,
-          segments:data.segments,
+          segments: data.segments,
           redness_mask: data.detection.result.redness_mask,
           wrinkle_mask: data.detection.result.wrinkle_mask,
           image: data.image
@@ -92,12 +94,14 @@ const Detection = () => {
       }
       else if (data.detection.is_aborted == false && data.detection.is_imperfect == true) {
         // window.location.href = `/detection?id=${data.detection.id}`
+        setRenderingComponent("is_imperfect")
         toast.error("لطفا عکس بهتری بارگذاری کنید")
         setTimeout(() => {
           setLoading(false);
         }, 1000);
       }
       else {
+        setRenderingComponent("is_aborted")
         toast.error("عکس مناسب تشخیص نیست")
         setTimeout(() => {
           setLoading(false);
@@ -119,26 +123,33 @@ const Detection = () => {
   }
   console.log(data, "data3456")
 
+  const renderComponent = () => {
+    if (loading) {
+      return <Loading className="h-[calc(50vh)]" />
+    }
+    else if (renderingComponent == "take_image") {
+      return (
+        <CameraApp
+          onClear={() => console.log("setCardImage")}
+          search={find}
+          buttonText="تشخیص"
+        />
+      )
+    }
+    else if (renderingComponent == "has_result") {
+      return <DetectionResultComponent data={data} />
+    }
+    else if (renderingComponent == "is_imperfect") {
+      return <div>is_imperfect</div>
+    }
+    else if (renderingComponent == "is_aborted") {
+      return <div>is_aborted</div>
+    }
+  }
+
   return (
     <>
-      {data.predicted_age == 0 ?
-        <div className="detection_root">
-          {!loading ?
-            (
-              <CameraApp
-                onClear={() => console.log("setCardImage")}
-                search={find}
-                buttonText="تشخیص"
-              />
-            )
-            :
-            (
-              <Loading className="h-[calc(50vh)]" />
-            )}
-        </div>
-        :
-        <DetectionResultComponent data={data} />
-      }
+      {renderComponent()}
       {showCompleteProfileModal &&
         <Modal setShowModal={setShowCompleteProfileModal} containerClassName="items-center" innerClassName="w-mc sm:w-124">
           <CompleteProfile />

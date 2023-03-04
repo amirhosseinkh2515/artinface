@@ -61,7 +61,7 @@ const CameraApp: React.FC<CameraApp> = ({ onClear, search, buttonText }) => {
     onClear();
   }
   return (
-    <>
+    <div className="detection_root">
       {dataUri || galleryFile ? (
         <ImagePreview
           dataUri={dataUri}
@@ -110,7 +110,7 @@ const CameraApp: React.FC<CameraApp> = ({ onClear, search, buttonText }) => {
           } */}
         </div>
       )}
-    </>
+    </div>
   );
 }
 
