@@ -72,7 +72,7 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
                     <div className='flex flex-wrap w-[256px] h-[256px]'>
                         <img ref={imgRef} src={data.image} className="w-full h-full" />
                         {container_width &&
-                            <span className="absolute w-full h-full">
+                            <span className="absolute w-[256px] h-[256px]">
                                 <Svg width={container_width} data={data.segments} />
                             </span>
                         }
@@ -116,7 +116,7 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
                             <span>{convertNumberToPercant(data.facial_attributes.Male)}</span>
                         </div>
                     </div>
-                    <CustomLink className='border-[1px] border-gray-8 py-2 px-8 mt-4 md:mt-0 bg-dark-main text-gray-8'>
+                    <CustomLink href='/proposal-production' className='border-[1px] border-gray-8 py-2 px-8 mt-4 md:mt-0 bg-dark-main text-gray-8'>
                         معرفی محصولات
                     </CustomLink>
                 </div>

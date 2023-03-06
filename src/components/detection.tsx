@@ -5,6 +5,7 @@ import { detect } from "@/services/detection";
 import lonely_beautiful_girl from '@/assets/images/lonely_beautiful_girl.png'
 import { useRouter } from "next/router";
 import DetectionResultComponent from '@/components/detectionResult'
+import ImperfectDetectionComponent from '@/components/imperfectDetectionComponent'
 import CompleteProfile from '@/components/completeProfile'
 import Modal from '@/components/modal'
 import { useNextQueryParams } from "../hooks/useQueryParams";
@@ -95,7 +96,6 @@ const Detection = () => {
       else if (data.detection.is_aborted == false && data.detection.is_imperfect == true) {
         // window.location.href = `/detection?id=${data.detection.id}`
         setRenderingComponent("is_imperfect")
-        toast.error("لطفا عکس بهتری بارگذاری کنید")
         setTimeout(() => {
           setLoading(false);
         }, 1000);
@@ -140,7 +140,7 @@ const Detection = () => {
       return <DetectionResultComponent data={data} />
     }
     else if (renderingComponent == "is_imperfect") {
-      return <div>is_imperfect</div>
+      return <ImperfectDetectionComponent setRenderingComponent={setRenderingComponent}/>
     }
     else if (renderingComponent == "is_aborted") {
       return <div>is_aborted</div>
