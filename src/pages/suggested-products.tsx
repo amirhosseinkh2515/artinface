@@ -1,9 +1,9 @@
 import React from 'react'
 import { SEO } from '../components/seo'
-import StoreComponent from '../components/store'
+import SuggestedProductionComponent from '../components/suggestedProductionComponent'
 
 
-const StorePage = () => {
+const SuggestedProduction = () => {
   return (
     <>
       <SEO
@@ -12,9 +12,9 @@ const StorePage = () => {
         image={""}
         
       />
-      <StoreComponent />
+      <SuggestedProductionComponent />
     </>
   )
 }
 
-export default StorePage
+export default SuggestedProduction

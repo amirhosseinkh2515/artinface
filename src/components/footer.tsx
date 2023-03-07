@@ -15,7 +15,7 @@ const Footer = () => {
     // const user = UseProfile()
 
     return (
-        <footer className="p-4 bg-dark-main mb-[calc(41px+2vw)] xs:mb-0">
+        <footer className="p-4 bg-dark-main mb-[calc(41px+2vw)] xs:mb-0 relative">
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <CustomLink href={'/'} className="flex items-center ml-4">
                     <LogoIcon color="#fff" />

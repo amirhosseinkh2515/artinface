@@ -116,7 +116,7 @@ const DetectionResultComponent = ({ data }: { data: any }) => {
                             <span>{convertNumberToPercant(data.facial_attributes.Male)}</span>
                         </div>
                     </div>
-                    <CustomLink href='/proposal-production' className='border-[1px] border-gray-8 py-2 px-8 mt-4 md:mt-0 bg-dark-main text-gray-8'>
+                    <CustomLink href='/suggested-products' className='border-[1px] border-gray-8 py-2 px-8 mt-4 md:mt-0 bg-dark-main text-gray-8'>
                         معرفی محصولات
                     </CustomLink>
                 </div>
