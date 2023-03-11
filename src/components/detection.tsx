@@ -102,7 +102,6 @@ const Detection = () => {
       }
       else {
         setRenderingComponent("is_aborted")
-        toast.error("عکس مناسب تشخیص نیست")
         setTimeout(() => {
           setLoading(false);
         }, 1000);
@@ -140,10 +139,10 @@ const Detection = () => {
       return <DetectionResultComponent data={data} />
     }
     else if (renderingComponent == "is_imperfect") {
-      return <ImperfectDetectionComponent setRenderingComponent={setRenderingComponent}/>
+      return <ImperfectDetectionComponent setRenderingComponent={setRenderingComponent} text="لطفا عکس بهتری بارگذاری کنید"/>
     }
     else if (renderingComponent == "is_aborted") {
-      return <div>is_aborted</div>
+      return <ImperfectDetectionComponent setRenderingComponent={setRenderingComponent} text="عکس مناسب تشخیص نیست"/>
     }
   }
 

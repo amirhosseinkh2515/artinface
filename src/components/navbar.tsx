@@ -36,7 +36,7 @@ const Navbar = () => {
     <nav className="flex justify-center items-center w-full bg-dark-main sticky top-0 z-[101] h-[78px] xl:h-[108px]">
       <div className="container flex flex-wrap justify-center items-center mx-auto">
         <div className="flex flex-wrap justify-between items-center">
-          {!isMobile &&
+          {/* {!isMobile && */}
             <div className='absolute right-16 xs:relative xs:right-0' id="mobile-menu">
               <button onClick={showDropDownMenu} data-collapse-toggle="mobile-menu" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu" aria-expanded="false">
                 <span className="sr-only">Open main menu</span>
@@ -60,7 +60,7 @@ const Navbar = () => {
                 </div>
               }
             </div>
-          }
+          {/* } */}
           <div className="hidden w-full lg:block lg:w-auto" >
             <ul className="flex flex-col mt-4 md:flex-row md:mt-0 md:text-sm">
               {

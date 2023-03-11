@@ -13,6 +13,11 @@
     margin-top: 60px !important;
     padding: 0 !important;
   }
+  .upload-btn-wrapper {
+    top: unset !important;
+    width: 10% !important;
+    bottom: 15vh;
+  }
 }
 
 
@@ -209,7 +214,7 @@
 }
 
 .overlay_wrapper .button_group button:first-child {
-  background-color: #2D2D2D; 
+  background-color: #229AF0; 
   border-radius:5px ;
   margin-bottom: 5px;
 }

@@ -4,9 +4,10 @@ import "cropperjs/dist/cropper.css";
 // import sendGa from "../../../hooks/useSendGa";
 import add_folder from '../../../assets/icons/add-folder.png'
 import DragAndDropFile from '../../dragAndDropFile'
+import useCheckMobile from '@/hooks/useCheckMobile'
 
 const ImageCroper = ({ handleImageUpload, image, setImage }) => {
-
+  const isMobile = useCheckMobile()
   const [cropper, setCropper] = useState();
   const [harchi, setHarchi] = useState();
   const galleryRef = useRef();
@@ -88,27 +89,33 @@ const ImageCroper = ({ handleImageUpload, image, setImage }) => {
         }
       </div>
       <br style={{ clear: "both" }} />
-      {image ?
-        <button className="text-white bg-red-main p-3 ml-[10px]" onClick={removeImage}>
-          بارگذاری مجدد
-        </button>
-        :
-        <DragAndDropFile onChange={onChange} />
+      {!isMobile &&
+        <>
+          {image ?
+            <button className="text-white bg-red-main p-3 ml-[10px]" onClick={removeImage}>
+              بارگذاری مجدد
+            </button>
+            :
+            <DragAndDropFile onChange={onChange} />
+          }
+        </>
       }
 
-      {/* <div style={{ marginLeft: 10, cursor: "pointer" }}>
-        <button style={{ color: "#dfdfdf", fontSize: "25px", textAlign: "left" }} onClick={uploadImage} >
-          <img src={add_folder} className="brightness-[4.5]"/>
-        </button>
-        <span className="ml-2" onClick={() => galleryRef.current.click()}>گالری</span>
-        <input
-          ref={galleryRef}
-          accept=".jpg, .jpeg, .png"
-          className="hidden"
-          type="file"
-          onChange={onChange}
-        />
-      </div> */}
+      {isMobile &&
+        <div style={{ marginLeft: 10, cursor: "pointer" }}>
+          <button style={{ color: "#dfdfdf", fontSize: "25px", textAlign: "left" }} onClick={uploadImage} >
+            <img src={add_folder} className="brightness-[4.5]" />
+          </button>
+          <span className="ml-2" onClick={() => galleryRef.current.click()}>گالری</span>
+          <input
+            ref={galleryRef}
+            accept=".jpg, .jpeg, .png"
+            className="hidden"
+            type="file"
+            onChange={onChange}
+          />
+        </div>
+      }
 
 
 

@@ -3,19 +3,25 @@ import ProductColumns from '@/components/productColumns'
 import cream from "../assets/images/cream.png"
 import cream2 from "../assets/images/cream2.png"
 import shampo from "../assets/images/shampo.png"
+import BreadCrumb from "./breadCrumb"
 
+const breadCrumb = [
+    { name: 'خانه', href: '/' },
+    { name: 'محصولات پیشنهادی' }
+]
 
 const ProposalProductionComponent = () => {
     const [data, setData] = useState<any>({})
 
     return (
         <div className="relative">
+            <BreadCrumb item={breadCrumb} className="mr-[5%]"/>
             <div className="w-full h-full overflow-hidden fixed">
                 <div className="w-[750px] h-[670px] blur-[200px] custom_gradient-fifth rotate-[168deg] absolute -left-[15%] top-[400px]" />
                 <div className="w-152 h-[1096px] blur-[100px] custom_gradient-sixth -rotate-[105deg] absolute -right-[15%] top-[300px]" />
             </div>
             <div className="container flex justify-center mx-auto my-10  ">
-
+            
                 {/* right */}
                 <div className='w-full sm:h-unset sm:w-126 z-[201] sm:z-[9] fixed sm:static top-0 right-0'>
                     <div className='flex flex-wrap w-full h-full sm:h-auto sm:w-full z-[201] sm:z-[9] fixed sm:sticky top-0 sm:top-[120px] right-0 border-[1px] border-gray-8 bg-dark-main p-8'>

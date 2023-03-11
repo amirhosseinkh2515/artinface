@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 
 type BreadCrumb = {
     item: any
@@ -14,9 +13,7 @@ const BreadCrumb: React.FC<BreadCrumb> = ({ item, className, color }) => {
             {
                 item.slice(0, -1).map((item: any, i: any) => (
                     <React.Fragment key={i}>
-                        <Link href={item.href}>
-                            <a > {item.name}</a>
-                        </Link>
+                        <a href={item.href}> {item.name}</a>
                         <span> / </span>
                     </React.Fragment>
                 ))

@@ -33,9 +33,7 @@ const ProductColumns: FC<ProductColumns> = ({ img }) => {
                                 <span className="mr-1">56</span>
                             </div>
                             <div className="text-gray-8 text-xs md:text-sm 2xl:text-base">
-                                <span>
-                                    امتیاز کاربران:
-                                </span>
+                                امتیاز کاربران:
                             </div>
                             <div className="flex justify-end text-xs md:text-sm 2xl:text-base">
                                 <span className="text-white">
